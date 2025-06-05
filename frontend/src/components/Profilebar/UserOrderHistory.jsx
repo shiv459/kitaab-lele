@@ -16,7 +16,7 @@ function UserOrder() {
                     id: Cookies.get('id'),
                     Authorization: `Bearer ${Cookies.get('token')}`
                 };
-                const response = await axios.get('http://localhost:3000/api/v1/getorderhistory', { headers });
+                const response = await axios.get('https://kitaab-lele-iyj9-shiv459s-projects.vercel.app/api/v1/getorderhistory', { headers });
                 console.log("Response:", response);
                 setOrderHist(response.data.data);
                 setLoading(false);

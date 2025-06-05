@@ -18,7 +18,7 @@ function Setting() {
     useEffect(() => {
         const fetchInfo = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/v1/getinfo', { headers });
+                const response = await axios.get('https://kitaab-lele-iyj9-shiv459s-projects.vercel.app/api/v1/getinfo', { headers });
                 console.log('Response:', response);
                 setValue({ address: response.data.address });
                 setProfile(response.data);
@@ -33,7 +33,7 @@ function Setting() {
         setLoading(true);
         try {
             const response = await axios.put(
-                'http://localhost:3000/api/v1/updateaddress',
+                'https://kitaab-lele-iyj9-shiv459s-projects.vercel.app/api/v1/updateaddress',
                 { address: value.address },
                 { headers }
             );

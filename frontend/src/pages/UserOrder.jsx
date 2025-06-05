@@ -12,7 +12,7 @@ function UserOrders() {
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/v1/getallorders', {
+                const response = await axios.get('https://kitaab-lele-iyj9-shiv459s-projects.vercel.app/api/v1/getallorders', {
                     headers: {
                         Authorization: `Bearer ${Cookies.get('token')}`,
                     },
@@ -35,7 +35,7 @@ function UserOrders() {
 
     const handleStatusChange = async (orderId, newStatus) => {
         try {
-            await axios.put(`http://localhost:3000/api/v1/update-status/${orderId}`, 
+            await axios.put(`https://kitaab-lele-iyj9-shiv459s-projects.vercel.app/api/v1/update-status/${orderId}`, 
                 { status: newStatus }, 
                 {
                     headers: {

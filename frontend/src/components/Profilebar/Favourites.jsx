@@ -23,7 +23,7 @@ function Favourites() {
                     Authorization: `Bearer ${token}`
                 };
     
-                const response = await axios.get('http://localhost:3000/api/v1/getfavbook', { headers });
+                const response = await axios.get('https://kitaab-lele-iyj9-shiv459s-projects.vercel.app/api/v1/getfavbook', { headers });
                 setFavorites(response.data.data);
                 setLoading(false);
             } catch (err) {

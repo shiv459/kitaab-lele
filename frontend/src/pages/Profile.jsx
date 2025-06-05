@@ -19,7 +19,7 @@ function Profile() {
 
         const fetch = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/v1/getinfo", { headers });
+                const response = await axios.get("https://kitaab-lele-iyj9-shiv459s-projects.vercel.app/api/v1/getinfo", { headers });
                 console.log("hiiii"  ,response.data);
                 setprofile(response.data);
             } catch (error) {
